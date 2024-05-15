@@ -107,6 +107,7 @@ in with lib; {
       exec-once = [
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &"
         "waybar &"
+        "${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray &"
         "kitty"
         "kdeconnect-indicator"
       ];
@@ -207,8 +208,8 @@ in with lib; {
   };
 
   services = {
-    syncthing = { # Enable SyncthingTray
-      enable = true;
+    syncthing = { # Enable SyncthingTray (diabled)
+      enable = false;
       tray = {
         enable = true;
         command = "${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray"; # Hack to start syncthingtray later
