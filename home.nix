@@ -209,7 +209,10 @@ in with lib; {
   services = {
     syncthing = { # Enable SyncthingTray
       enable = true;
-      tray = true;
+      tray = {
+        enable = true;
+        command = "${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray"; # Hack to start syncthingtray later
+      };
     };
     hyprpaper = {
       enable = false;
