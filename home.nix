@@ -207,6 +207,10 @@ in with lib; {
   };
 
   services = {
+    syncthing = { # Enable SyncthingTray
+      enable = true;
+      tray = true;
+    };
     hyprpaper = {
       enable = false;
       settings = {

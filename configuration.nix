@@ -282,8 +282,6 @@
     nh
     nix-output-monitor
     nvd
-    syncthing
-    syncthingtray
     wget
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
