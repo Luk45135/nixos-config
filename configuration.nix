@@ -53,8 +53,8 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 8384 22000 53317 ]; # Syncthing + LocalSend
-      allowedUDPPorts = [ 22000 21027 53317 ]; 
+      allowedTCPPorts = [ 8384 53317 ]; # Syncthing + LocalSend
+      allowedUDPPorts = [ 53317 ]; 
       allowedTCPPortRanges = [
         { from = 1714; to = 1764; } # KDE Connect
       ];
@@ -96,6 +96,7 @@
       configDir = "/home/lukasd/.config/syncthing";
       overrideDevices = true; 
       overrideFolders = true;
+      openDefaultPorts = true;
       settings = {
         devices = {
           "fedora-server" = { id = "RRKARZM-CQJRN7C-KO77MSF-R6WB5QM-7T6XR7I-QI7TQ63-SDQCNTR-JS33TQC"; };
@@ -121,7 +122,6 @@
           password = "oZ@Dza*%69HAy243Z5#UfdsE#HNTf7%$";
         };
       };
-  
     };
     printing.enable = true; # Enable CUPS to print documents.
     avahi = { # Enable autodiscovery of network printers

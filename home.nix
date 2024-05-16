@@ -208,13 +208,6 @@ in with lib; {
   };
 
   services = {
-    syncthing = { # Enable SyncthingTray (diabled)
-      enable = false;
-      tray = {
-        enable = true;
-        command = "${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray"; # Hack to start syncthingtray later
-      };
-    };
     hyprpaper = {
       enable = false;
       settings = {
