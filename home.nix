@@ -243,6 +243,12 @@ in with lib; {
         ];
       };
     };
+    eza = {
+      enable = true;
+      enableZshIntegration = true;
+      git = true;
+      icons = true;
+    };
     kitty = {
       enable = true;
       settings = {
