@@ -209,15 +209,15 @@ in with lib; {
 
   services = {
     hyprpaper = {
-      enable = false;
+      enable = true;
       settings = {
         ipc = "off";
         splash = false;
         splash_offset = 2.0;
-        preload = [ "~/Pictures/system/wallpapers/nix-owo.png" ];
+        preload = [ "~/Pictures/system/wallpapers/nix-owo-upscaled.png" ];
         wallpaper = [
-          "DVI-D-1,~/Pictures/system/wallpapers/nix-owo.png"
-          "HDMI-A-1,~/Pictures/system/wallpapers/nix-owo.png"
+          "DVI-D-1,~/Pictures/system/wallpapers/nix-owo-upscaled.png"
+          "HDMI-A-1,~/Pictures/system/wallpapers/nix-owo-upscaled.png"
         ];
       };
     };
