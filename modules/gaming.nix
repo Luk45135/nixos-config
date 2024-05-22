@@ -15,6 +15,9 @@
       gamescopeSession.enable = true;
     };
   };
+  services.flatpak.packages = [
+    "io.github.lime3ds.Lime3DS"
+  ];
   users.users.lukasd.packages = with pkgs; [
     prismlauncher
     temurin-bin-17

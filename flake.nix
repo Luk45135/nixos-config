@@ -12,8 +12,9 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #stylix.url = "github:danth/stylix";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    #stylix.url = "github:danth/stylix";
 
     # PR's
     #nixpkgs-streamrip.url = "github:paveloom/nixpkgs/streamrip";
@@ -25,6 +26,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        inputs.nix-flatpak.nixosModules.nix-flatpak
         #inputs.stylix.nixosModules.stylix
       ];
     };
