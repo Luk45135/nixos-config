@@ -99,7 +99,10 @@ in with lib; {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+      variables = [ "--all" ];
+    };
     plugins = [
       # hyprplugins.hyprtrails
     ];
