@@ -203,6 +203,7 @@
       firefox
       # kate
       webcord
+      vesktop
       vscode
       onlyoffice-bin_latest
       anydesk
