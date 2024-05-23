@@ -203,6 +203,7 @@ in with lib; {
     };
     extraConfig = ''
       monitor = , preferred, auto, auto
+      monitor = Unknown-1, disable #Disable ghost monitor
       windowrulev2 = stayfocused, class:^(Rofi)
     '';
   };
