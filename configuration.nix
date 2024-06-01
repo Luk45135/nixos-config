@@ -210,8 +210,8 @@
       # davinci-resolve
       feishin
       # sonixd
+      streamrip
       ffmpeg
-      pipx
       filezilla
       #lmstudio
       obs-studio
