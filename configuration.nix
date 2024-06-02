@@ -284,7 +284,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     waybar
-    lf
+    yazi
     rofi-wayland
     rofimoji
     piper
