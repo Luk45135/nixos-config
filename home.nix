@@ -257,6 +257,10 @@ in with lib; {
       git = true;
       icons = true;
     };
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     kitty = {
       enable = true;
       settings = {
