@@ -182,6 +182,10 @@ in with lib; {
         "$mainMod, F, fullscreen"
         " , Print, exec, grimblast --freeze copysave area"
         "$mainMod , Print, exec, grimblast --freeze copysave output"
+        "ALT, Tab, cyclenext,"
+        "ALT, Tab, bringactivetotop,"
+        "ALT Shift, Tab, cyclenext, prev"
+        "ALT Shift, Tab, bringactivetotop"
       ]
       ++ (
         # workspaces
