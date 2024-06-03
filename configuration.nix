@@ -200,6 +200,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       eza
+      zoxide
       firefox
       # kate
       vesktop

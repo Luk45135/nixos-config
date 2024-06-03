@@ -273,6 +273,13 @@ in with lib; {
       enable = true;
       enableZshIntegration = true;
     };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
     kitty = {
       enable = true;
       settings = {
