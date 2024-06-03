@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./modules/nvidia.nix
       ./modules/gaming.nix
+      ./modules/shell.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -196,10 +197,7 @@
     isNormalUser = true;
     description = "Lukas Dorji";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
     packages = with pkgs; [
-      eza
-      zoxide
       firefox
       # kate
       vesktop
@@ -253,9 +251,7 @@
       FLAKE = "/home/lukasd/.dotfiles";
     };
   };
-  # Use zsh
-  environment.shells = [ pkgs.zsh ];
-  programs.zsh.enable = true;
+  
 
   # Home Manager
   home-manager = {
@@ -283,7 +279,6 @@
   environment.systemPackages = with pkgs; [
     kitty
     waybar
-    yazi
     rofi-wayland
     rofimoji
     piper
