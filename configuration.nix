@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ./modules/nvidia.nix
       ./modules/gaming.nix
-      #./modules/stylix.nix
       inputs.home-manager.nixosModules.default
     ];
 
