@@ -9,13 +9,25 @@ in with lib; {
     inputs.nix-colors.homeManagerModules.default
   ];
   
-  # Configure Cursor Theme
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-    size = 24;
+  
+  home = {
+    username = "lukasd";
+    homeDirectory = "/home/lukasd";
+    # This value determines the Home Manager release that your configuration is
+    # compatible with. This helps avoid breakage when a new Home Manager release
+    # introduces backwards incompatible changes.
+    #
+    # You should not change this value, even if you update Home Manager. If you do
+    # want to update the value, then make sure to first check the Home Manager
+    # release notes.
+    stateVersion = "23.11"; # Please read the comment before changing.
+    pointerCursor = { # Configure Cursor Theme
+      gtk.enable = true;
+      x11.enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
+    };
   };
 
   # Theming
@@ -60,19 +72,7 @@ in with lib; {
   # nix-colors colorscheme
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  home.username = "lukasd";
-  home.homeDirectory = "/home/lukasd";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -816,10 +816,6 @@ in with lib; {
   #
   #  /etc/profiles/per-user/lukasd/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    # NIXPKGS_ALLOW_UNFREE = 1;
-    # FLAKE = "/etc/nixos";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
