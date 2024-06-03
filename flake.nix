@@ -14,9 +14,6 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nix-gaming.url = "github:fufexan/nix-gaming";
-
-    # PR's
-    #nixpkgs-streamrip.url = "github:paveloom/nixpkgs/streamrip";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
