@@ -232,23 +232,25 @@ in with lib; {
   };
 
   programs = {
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = false;
+      };
+    };
     zsh = {
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
-      shellAliases = {
-        la = "ls -la";
-      };
-      plugins = [
-        { name = "p10k-config"; src = lib.cleanSource ./p10k-config; file = "p10k.zsh"; }
-      ];
-      zplug = {
+      autocd = true;
+      historySubstringSearch = {
         enable = true;
-        plugins = [
-          { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-          { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
-        ];
+        searchDownKey = [ "^[[B" "$terminfo[kcud1]" ];
+        searchUpKey = [ "^[[A" "$terminfo[kcuu1]" ];
+      };
+      shellAliases = {
+        #la = "ls -la";
       };
     };
     eza = {
