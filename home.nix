@@ -236,6 +236,16 @@ in with lib; {
       enable = true;
       settings = {
         add_newline = false;
+        username = {
+          show_always = true;
+          style_user = "cyan bold";
+          style_root = "red bold";
+          format = "[$user]($style) on ";
+        };
+        hostname = {
+          ssh_only = false;
+          style = "bright-blue bold";
+        };
       };
     };
     zsh = {
