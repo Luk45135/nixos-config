@@ -35,7 +35,7 @@
         searchUpKey = [ "^[[A" "$terminfo[kcuu1]" ];
       };
       shellAliases = {
-        #la = "ls -la";
+        fk = "fuck";
       };
     };
     eza = {
@@ -55,6 +55,10 @@
       options = [
         "--cmd cd"
       ];
+    };
+    thefuck = {
+      enable = true;
+      enableZshIntegration = true;
     };
   };
 }
