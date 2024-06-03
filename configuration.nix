@@ -217,7 +217,7 @@
       signal-desktop
       tldr
       whatsapp-for-linux
-      # obsidian
+      obsidian
       localsend
       thunderbird
       qbittorrent
