@@ -54,7 +54,7 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 8384 53317 ]; # Syncthing + LocalSend
+      allowedTCPPorts = [ 53317 ]; # LocalSend
       allowedUDPPorts = [ 53317 ]; 
       allowedTCPPortRanges = [
         { from = 1714; to = 1764; } # KDE Connect
