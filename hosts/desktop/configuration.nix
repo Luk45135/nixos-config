@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/hypreco.nix
       ../../modules/nvidia.nix
       ../../modules/gaming.nix
       ../../modules/shell.nix
@@ -154,16 +155,6 @@
   };
 
   
-  programs = {
-    hyprland.enable = true; # Enable the Hyprland wayland compositor
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
-  };
 
   # Configure console keymap
   console.keyMap = "sg";
@@ -277,21 +268,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    kitty
-    waybar
-    rofi-wayland
-    rofimoji
     piper
-    xfce.thunar
-    libsForQt5.ark
     git
     fastfetch
     btop
-    grimblast
-    pavucontrol
-    wl-clipboard
-    wlogout
-    hyprlock
     sddm-chili-theme
     mpv
     gwenview
