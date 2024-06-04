@@ -8,9 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/nvidia.nix
-      ./modules/gaming.nix
-      ./modules/shell.nix
+      ../../modules/nvidia.nix
+      ../../modules/gaming.nix
+      ../../modules/shell.nix
       inputs.home-manager.nixosModules.default
     ];
 
