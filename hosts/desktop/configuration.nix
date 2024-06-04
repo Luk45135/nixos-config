@@ -11,6 +11,7 @@
       ../../modules/nvidia.nix
       ../../modules/gaming.nix
       ../../modules/shell.nix
+      ../../modules/firefox.nix
       inputs.home-manager.nixosModules.default
     ];
 
