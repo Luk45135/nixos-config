@@ -112,7 +112,6 @@ in with lib; {
         "waybar &"
         "${pkgs.coreutils}/bin/sleep 5; ${pkgs.syncthingtray-minimal}/bin/syncthingtray &"
         "kitty"
-        "kdeconnect-indicator"
       ];
       env = [
         "NIXOS_OZONE_WL, 1"
@@ -228,6 +227,10 @@ in with lib; {
           "HDMI-A-1,~/Pictures/system/wallpapers/nix-owo-upscaled.png"
         ];
       };
+    };
+    kdeconnect = {
+      enable = true;
+      indicator = true;
     };
   };
 

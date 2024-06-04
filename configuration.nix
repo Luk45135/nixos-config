@@ -155,7 +155,6 @@
   
   programs = {
     hyprland.enable = true; # Enable the Hyprland wayland compositor
-    kdeconnect.enable = true; # Enable kdeconnect
   };
 
   xdg.portal = {
