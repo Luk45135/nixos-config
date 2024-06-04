@@ -9,11 +9,7 @@ in with lib; {
   ];
 
 
-  programs = {
-    hyprland.enable = true;
-    hyprlock.enable = true;
-  };
-  home-manager.users.lukasd.wayland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd = {
@@ -138,7 +134,7 @@ in with lib; {
     ];
   };
 
-  home-manager.users.lukasd.services.hyprpaper = {
+  services.hyprpaper = {
     enable = true;
     settings = {
       ipc = "off";
@@ -155,7 +151,7 @@ in with lib; {
   # nix-colors colorscheme
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
-  home-manager.users.lukasd.programs = {
+  programs = {
     kitty = {
       enable = true;
       settings = {
@@ -508,14 +504,8 @@ in with lib; {
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    grimblast
-    xfce.thunar
-    libsForQt5.ark
-    pavucontrol
-    wl-clipboard
-  ];
-  home-manager.users.lukasd.home.file = { # Hyprlock
+
+  home.file = { # Hyprlock
     ".config/hypr/hyprlock.conf".text = ''
       background {
           monitor =

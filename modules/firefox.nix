@@ -2,7 +2,7 @@
 
 {
 
-  home-manager.users.lukasd.programs.firefox = {
+  programs.firefox = {
     enable = true;
     policies = {
       DisableTelemetry = true;

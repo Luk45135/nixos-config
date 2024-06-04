@@ -2,11 +2,7 @@
 
 {
   
-  users.users.lukasd.shell = pkgs.zsh;
-  environment.shells = [ pkgs.zsh ];
-  programs.zsh.enable = true;
-
-  home-manager.users.lukasd.programs = {
+  programs = {
     starship = {
       enable = true;
       settings = {

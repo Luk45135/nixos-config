@@ -2,6 +2,12 @@
 
 {
 
+  imports = [
+    ./modules/hypreco.nix
+    ./modules/shell.nix
+    ./modules/firefox.nix
+  ];
+
   home = {
     username = "lukasd";
     homeDirectory = "/home/lukasd";

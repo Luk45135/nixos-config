@@ -8,11 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/hypreco.nix
       ../../modules/nvidia.nix
       ../../modules/gaming.nix
-      ../../modules/shell.nix
-      ../../modules/firefox.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -154,7 +151,11 @@
     };
   };
 
-  
+  programs = {
+    hyprland.enable = true;
+    hyprlock.enable = true;
+    zsh.enable = true;
+  };
 
   # Configure console keymap
   console.keyMap = "sg";
@@ -188,6 +189,7 @@
     isNormalUser = true;
     description = "Lukas Dorji";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
       # kate
@@ -236,6 +238,7 @@
   };
 
   environment = {
+    shells = [ pkgs.zsh ];
     localBinInPath = true;
     sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
@@ -248,7 +251,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {
-      "lukasd" = import ./home.nix;
+      "lukasd" = import ../../home.nix;
     };
   };
 
@@ -279,6 +282,11 @@
     nix-output-monitor
     nvd
     wget
+    grimblast
+    xfce.thunar
+    libsForQt5.ark
+    pavucontrol
+    wl-clipboard
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
