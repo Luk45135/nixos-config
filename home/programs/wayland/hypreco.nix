@@ -173,7 +173,7 @@ in with lib; {
       };
       theme = "Arc-Dark";
       package = pkgs.rofi-wayland;
-      plugins = [ pkgs.rofimoji ];
+      plugins = [ pkgs.rofi-emoji ]; # broken in 1.7.5+wayland3 wait until 1.7.6
     };
     waybar = {
       enable = true;
