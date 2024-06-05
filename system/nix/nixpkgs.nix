@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ self, pkgs, ... }: {
   
   environment.systemPackages = [pkgs.git];
   nix.settings = {

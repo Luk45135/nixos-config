@@ -29,7 +29,6 @@
       size = 24;
     };
     packages = with pkgs; [
-      firefox
       # kate
       vesktop
       vscode
@@ -54,6 +53,10 @@
       yt-dlp
     ];
   };
+
+  #temp unfree
+  nixpkgs.config.allowUnfree = true;
+
 
   # Theming
   qt = {
