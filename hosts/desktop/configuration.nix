@@ -8,8 +8,20 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nvidia.nix
-      ../../modules/gaming.nix
+
+      ../../system/core/user.nix
+
+      ../../system/nix/nixpkgs.nix
+      ../../system/nix/nh.nix
+
+      ../../system/hardware/nvidia.nix
+
+      ../../system/programs/steam.nix
+
+      ../../system/services/flatpak.nix
+      ../../system/services/pipewire.nix
+      ../../system/services/syncthing.nix
+
       inputs.home-manager.nixosModules.default
     ];
 
@@ -22,18 +34,6 @@
     efi.canTouchEfiVariables = true;
   };
 
-  nix = {
-    settings = {
-      experimental-features = [ "nix-command" "flakes" ]; # Enabling nix commands and flakes
-      substituters = ["https://nix-gaming.cachix.org"]; # Enabling cachix
-      trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="]; # and the key for it
-    };
-    gc = { # Garbage collection
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 1w";
-    };
-  };
 
   # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -89,47 +89,13 @@
   # Services  
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
-    syncthing = { # Syncthing
-      enable = true;
-      user = "lukasd";
-      dataDir = "/home/lukasd/Public";
-      configDir = "/home/lukasd/.config/syncthing";
-      overrideDevices = true; 
-      overrideFolders = true;
-      openDefaultPorts = true;
-      settings = {
-        devices = {
-          "fedora-server" = { id = "RRKARZM-CQJRN7C-KO77MSF-R6WB5QM-7T6XR7I-QI7TQ63-SDQCNTR-JS33TQC"; };
-          "nobara-hp" = { id = "BZ5MUTO-IFSONN7-RCNUHC3-WKZX2EV-FRBLOJK-HMFWJ2R-BUVSTOE-XRZSKQA"; };
-          "SM-G985F" = { id = "CHN5RFJ-ULJB47F-5ZXALZ5-G76SS5C-4PEUPIB-5P4AV6N-DH752CE-SLPKRAY"; };
-        };
-        folders = {
-          "Syncthing" = {
-            path = "/home/lukasd/Documents/Syncthing";
-            devices = [ "fedora-server" "nobara-hp" "SM-G985F" ];
-          };
-          "Music" = {
-            path = "/home/lukasd/Music";
-            devices = [ "fedora-server" ];
-          };
-          "PhoneCamera" = {
-            path = "/home/lukasd/Pictures/PhoneCamera";
-            devices = [ "SM-G985F" ];
-          };
-        };
-        gui = {
-          user = "lukasd";
-          password = "oZ@Dza*%69HAy243Z5#UfdsE#HNTf7%$";
-        };
-      };
-    };
+    
     printing.enable = true; # Enable CUPS to print documents.
     avahi = { # Enable autodiscovery of network printers
       enable = true;
       nssmdns = true;
       openFirewall = true;
     };
-    libinput.enable = true;
     displayManager.sddm = {
       enable = true;
       theme = "chili";
@@ -145,6 +111,7 @@
   # Enable the X11 windowing system
   services.xserver = {
     enable = true;
+    libinput.enable = true;
     xkb = { # Configure keymap in X11
       layout = "ch";
       variant = "";
@@ -164,94 +131,23 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.lukasd = {
-    isNormalUser = true;
-    description = "Lukas Dorji";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-      # kate
-      vesktop
-      vscode
-      onlyoffice-bin_latest
-      anydesk
-      # davinci-resolve
-      feishin
-      # sonixd
-      streamrip
-      ffmpeg
-      filezilla
-      #lmstudio
-      obs-studio
-      picard
-      scrcpy
-      signal-desktop
-      tldr
-      whatsapp-for-linux
-      obsidian
-      localsend
-      thunderbird
-      qbittorrent
-      yt-dlp
-    ];
-  };
-
-  services.flatpak = {
-    enable = true;
-    packages = [
-
-    ];
-    overrides = {
-      global = {
-        # Force Wayland by default
-        Context.sockets = ["wayland" "!x11" "!fallback-x11"];
-        Environment = {
-          # Fix un-themed cursor in some Wayland apps
-          XCURSOR_PATH = "/run/host/user-share/icons:/run/host/share/icons";
-          # Force correct theme for some GTK apps
-          GTK_THEME = "Adwaita:dark";
-        };
-      };
-    };
-  };
+  # services.xserver.libinput.enable = true; 
 
   environment = {
     shells = [ pkgs.zsh ];
     localBinInPath = true;
     sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
-      FLAKE = "/home/lukasd/.dotfiles";
     };
   };
-  
 
   # Home Manager
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {
-      "lukasd" = import ../../home.nix;
+      "lukasd" = import ../../home/profiles/desktop.nix;
     };
   };
 
@@ -262,12 +158,9 @@
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ];})
   ];
 
-  # Allow unfree packages
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-    ];
-  };
+
+  #nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -278,9 +171,6 @@
     sddm-chili-theme
     mpv
     gwenview
-    nh
-    nix-output-monitor
-    nvd
     wget
     grimblast
     xfce.thunar
@@ -288,6 +178,10 @@
     pavucontrol
     wl-clipboard
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  ];
+
+  services.flatpak.packages = [
+    "io.github.lime3ds.Lime3DS"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

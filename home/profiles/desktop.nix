@@ -3,9 +3,11 @@
 {
 
   imports = [
-    ./modules/hypreco.nix
-    ./modules/shell.nix
-    ./modules/firefox.nix
+    
+    ../programs/shell.nix
+    ../programs/firefox.nix
+    ../programs/gaming.nix
+    ../programs/wayland/hypreco.nix
   ];
 
   home = {
@@ -26,6 +28,31 @@
       name = "Bibata-Modern-Ice";
       size = 24;
     };
+    packages = with pkgs; [
+      firefox
+      # kate
+      vesktop
+      vscode
+      onlyoffice-bin_latest
+      anydesk
+      # davinci-resolve
+      feishin
+      # sonixd
+      streamrip
+      ffmpeg
+      filezilla
+      #lmstudio
+      obs-studio
+      picard
+      scrcpy
+      signal-desktop
+      whatsapp-for-linux
+      obsidian
+      localsend
+      thunderbird
+      qbittorrent
+      yt-dlp
+    ];
   };
 
   # Theming
@@ -69,7 +96,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  #home.packages = [];
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -86,15 +113,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-  ];
-  
 
-  services = {
-    kdeconnect = {
-      enable = true;
-      indicator = true;
-    };
-  };
 
   programs = {
     mpv = {

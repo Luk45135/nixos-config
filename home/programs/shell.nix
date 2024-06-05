@@ -57,4 +57,9 @@
       enableZshIntegration = true;
     };
   };
+  home.packages = with pkgs; [
+    tlrc
+    nix-output-monitor
+    nvd
+  ];
 }
