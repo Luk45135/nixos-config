@@ -54,10 +54,6 @@
     ];
   };
 
-  #temp unfree
-  nixpkgs.config.allowUnfree = true;
-
-
   # Theming
   qt = {
     enable = true;

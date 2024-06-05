@@ -146,6 +146,7 @@
   # Home Manager
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
+    useGlobalPkgs = true;
     users = {
       "lukasd" = import ../../home/profiles/desktop.nix;
     };
