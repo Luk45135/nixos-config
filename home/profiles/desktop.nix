@@ -8,6 +8,9 @@
     ../programs/firefox.nix
     ../programs/gaming.nix
     ../programs/wayland/hypreco.nix
+
+    ../services/kdeconnect.nix
+    
   ];
 
   home = {
