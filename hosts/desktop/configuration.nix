@@ -18,6 +18,7 @@
 
       ../../system/programs/steam.nix
 
+      ../../system/services/printing.nix
       ../../system/services/flatpak.nix
       ../../system/services/pipewire.nix
       ../../system/services/syncthing.nix
@@ -89,13 +90,6 @@
   # Services  
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
-    
-    printing.enable = true; # Enable CUPS to print documents.
-    avahi = { # Enable autodiscovery of network printers
-      enable = true;
-      nssmdns = true;
-      openFirewall = true;
-    };
     displayManager.sddm = {
       enable = true;
       theme = "chili";
