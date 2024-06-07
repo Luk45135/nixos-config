@@ -22,6 +22,7 @@
 
       ../../system/programs/steam.nix
 
+      ../../system/services/X11.nix
       ../../system/services/printing.nix
       ../../system/services/flatpak.nix
       ../../system/services/pipewire.nix
@@ -83,15 +84,6 @@
   # Virtualization
   virtualisation.waydroid.enable = true;
 
-
-  # Enable the X11 windowing system
-  services.xserver = {
-    enable = true;
-    xkb = { # Configure keymap in X11
-      layout = "ch";
-      variant = "";
-    };
-  };
 
   programs = {
     hyprland.enable = true;
