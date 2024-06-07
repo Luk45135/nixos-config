@@ -17,6 +17,7 @@
       ../../system/nix/nixpkgs.nix
       ../../system/nix/nh.nix
 
+      ../../system/hardware/battery.nix
       ../../system/hardware/ssd.nix
 
       ../../system/services/X11.nix
@@ -63,6 +64,9 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+
+  # Battery
+  services
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
