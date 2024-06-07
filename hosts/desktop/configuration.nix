@@ -9,7 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      ../../system/core/boot.nix
+      ../../system/core/locale.nix
       ../../system/core/user.nix
+      ../../system/core/fonts.nix
 
       ../../system/nix/nixpkgs.nix
       ../../system/nix/nh.nix
@@ -27,14 +30,7 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  # Bootloader.
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 10;
-    };
-    efi.canTouchEfiVariables = true;
-  };
+  
 
 
   # Define your hostname.
@@ -70,23 +66,7 @@
     fallbackDns = [ "9.9.9.9" "9.9.9.11" ];
   };
 
-  # Set your time zone.
-  time.timeZone = "Europe/Zurich";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_CH.UTF-8";
-    LC_IDENTIFICATION = "de_CH.UTF-8";
-    LC_MEASUREMENT = "de_CH.UTF-8";
-    LC_MONETARY = "de_CH.UTF-8";
-    LC_NAME = "de_CH.UTF-8";
-    LC_NUMERIC = "de_CH.UTF-8";
-    LC_PAPER = "de_CH.UTF-8";
-    LC_TELEPHONE = "de_CH.UTF-8";
-    LC_TIME = "de_CH.UTF-8";
-  };
+  
 
   # Services  
   services = {
@@ -116,11 +96,9 @@
   programs = {
     hyprland.enable = true;
     hyprlock.enable = true;
-    zsh.enable = true;
   };
 
-  # Configure console keymap
-  console.keyMap = "sg";
+  
   
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
@@ -146,13 +124,6 @@
       "lukasd" = import ../../home/profiles/desktop.nix;
     };
   };
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ];})
-  ];
 
 
   # List packages installed in system profile. To search, run:

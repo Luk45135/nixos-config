@@ -9,7 +9,10 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      ../../system/core/boot.nix
+      ../../system/core/locale.nix
       ../../system/core/user.nix
+      ../../system/core/fonts.nix
 
       ../../system/nix/nixpkgs.nix
       ../../system/nix/nh.nix
@@ -20,9 +23,6 @@
       ../../system/services/pipewire.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixhp"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -34,11 +34,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Zurich";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -49,12 +44,11 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "ch";
-    xkbVariant = "";
+    xkb = {
+      layout = "ch";
+      xkbVariant = "";
+    };
   };
-
-  # Configure console keymap
-  console.keyMap = "sg";
 
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -69,9 +63,6 @@
       "lukasd" = import ../../home/profiles/laptop.nix;
     };
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
 
   # List packages installed in system profile. To search, run:
