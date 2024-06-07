@@ -15,6 +15,7 @@
       ../../system/nix/nh.nix
 
       ../../system/hardware/nvidia.nix
+      ../../system/hardware/ssd.nix
 
       ../../system/programs/steam.nix
 
