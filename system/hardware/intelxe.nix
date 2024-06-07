@@ -9,16 +9,14 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-      intel-vaapi-drivers
+      intel-vaapi-driver
       libvdpau-va-gl
-      interl-media-driver
+      intel-media-driver
     ];
     extraPackages32 = with pkgs.driversi686Linux; [
-      intel-vaapi-drivers
+      intel-vaapi-driver
       libvdpau-va-gl
-      interl-media-driver
+      intel-media-driver
     ];
   };
-
-
 }
