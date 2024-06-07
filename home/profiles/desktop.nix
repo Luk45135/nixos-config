@@ -7,6 +7,7 @@
     ../programs/shell.nix
     ../programs/git.nix
     ../programs/firefox.nix
+    ../programs/mpv.nix
     ../programs/gaming.nix
     ../programs/wayland/hypreco.nix
 
@@ -109,23 +110,6 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-
-
-  programs = {
-    mpv = {
-      enable = true;
-      config = {
-        ytdl-format = "bestvideo+bestaudio";
-        ao = "pulse";
-        audio-device = "auto";
-        hwdec = "auto-safe";
-        vo = "gpu";
-        profile = "gpu-hq";
-        gpu-context = "wayland";
-        force-window = true;
-      };
-    };
-  };
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
