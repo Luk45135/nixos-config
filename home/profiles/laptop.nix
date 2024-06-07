@@ -8,8 +8,6 @@
     ../programs/git.nix
     ../programs/firefox.nix
     ../programs/mpv.nix
-
-    ../services/kdeconnect.nix
     
   ];
 
