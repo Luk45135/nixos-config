@@ -27,15 +27,29 @@
     ];
 
 
-  networking.hostName = "nixhp"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking = {
+    hostName = "nixhp"; # Define your hostname.
+    networkmanager.enable = true;
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 53317 ]; # LocalSend
+      allowedUDPPorts = [ 53317 ]; 
+      allowedTCPPortRanges = [
+        { from = 1714; to = 1764; } # KDE Connect
+      ];
+      allowedUDPPortRanges = [
+        { from = 1714; to = 1764; } # KDE Connect
+      ];
+    };
+  };
+ 
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+
 
 
   # Enable the GNOME Desktop Environment.
