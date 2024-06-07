@@ -30,7 +30,6 @@
   networking = {
     hostName = "nixhp"; # Define your hostname.
     networkmanager.enable = true;
-    wireless.enable = true; # Enables wireless support via wpa_supplicant.
     firewall = {
       enable = true;
       allowedTCPPorts = [ 53317 ]; # LocalSend
