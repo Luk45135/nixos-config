@@ -17,6 +17,7 @@
       ../../system/nix/nixpkgs.nix
       ../../system/nix/nh.nix
 
+      ../../system/hardware/intelxe.nix
       ../../system/hardware/battery.nix
       ../../system/hardware/ssd.nix
 
