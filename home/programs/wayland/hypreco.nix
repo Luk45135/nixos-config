@@ -135,6 +135,7 @@ in {
 
   xdg.portal = {
     enable = true;
+    config.common.default = "*"; #temp until i figure out what to do with this
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
     ];
