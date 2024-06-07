@@ -71,6 +71,7 @@
   # Services  
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
+    libinput.enable = true;
     displayManager.sddm = {
       enable = true;
       theme = "chili";
@@ -86,7 +87,6 @@
   # Enable the X11 windowing system
   services.xserver = {
     enable = true;
-    libinput.enable = true;
     xkb = { # Configure keymap in X11
       layout = "ch";
       variant = "";
