@@ -24,6 +24,7 @@
       ../../system/services/X11.nix
       ../../system/services/printing.nix
       ../../system/services/pipewire.nix
+      ../../system/services/twingate.nix
     ];
 
 
