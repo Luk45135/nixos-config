@@ -5,6 +5,7 @@
   imports = [
     
     ../programs/shell.nix
+    ../programs/git.nix
     ../programs/firefox.nix
     ../programs/gaming.nix
     ../programs/wayland/hypreco.nix
@@ -129,14 +130,6 @@
         profile = "gpu-hq";
         gpu-context = "wayland";
         force-window = true;
-      };
-    };
-    git = {
-      enable = true;
-      userName = "LostLukas";
-      userEmail = "lukasdorji@gmail.com";
-      extraConfig = {
-        init.defaultBranch = "main";
       };
     };
   };
