@@ -9,4 +9,5 @@
       "wheel" 
     ];
   };
+  programs.zsh.enable = true;
 }
