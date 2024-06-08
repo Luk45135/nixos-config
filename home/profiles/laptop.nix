@@ -28,6 +28,7 @@
       obsidian
       localsend
       thunderbird
+      galaxy-buds-client
     ];
   };
 
