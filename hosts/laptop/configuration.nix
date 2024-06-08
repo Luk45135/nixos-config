@@ -87,6 +87,8 @@
   #  wget
   ];
 
+  hardware.sensor.iio.enable = true;
+
   services.syncthing = { # Syncthing
     enable = true;
     user = "lukasd";
