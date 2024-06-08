@@ -86,6 +86,32 @@
   #  wget
   ];
 
+  services.syncthing = { # Syncthing
+    enable = true;
+    user = "lukasd";
+    dataDir = "/home/lukasd/Public";
+    configDir = "/home/lukasd/.config/syncthing";
+    overrideDevices = true; 
+    overrideFolders = true;
+    openDefaultPorts = true;
+    settings = {
+      devices = {
+        "fedora-server" = { id = "RRKARZM-CQJRN7C-KO77MSF-R6WB5QM-7T6XR7I-QI7TQ63-SDQCNTR-JS33TQC"; };
+        "nixos" = { id = "FAUONAQ-QBTFPE6-DO6M77F-VZ4GMT2-FIMVLMC-EATBCGV-A7FKEDZ-TP72DQA"; };
+        "SM-G985F" = { id = "CHN5RFJ-ULJB47F-5ZXALZ5-G76SS5C-4PEUPIB-5P4AV6N-DH752CE-SLPKRAY"; };
+      };
+      folders = {
+        "Syncthing" = {
+          path = "/home/lukasd/Documents/Syncthing";
+          devices = [ "fedora-server" "nixos" "SM-G985F" ];
+        };
+      };
+      gui = {
+        user = "lukasd";
+        password = "oZ@Dza*%69HAy243Z5#UfdsE#HNTf7%$";
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
