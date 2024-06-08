@@ -28,7 +28,7 @@
       obsidian
       localsend
       thunderbird
-      galaxy-buds-client
+      stremio
     ];
   };
 
