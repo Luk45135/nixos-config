@@ -1,6 +1,7 @@
 {
   services = {
     thermald.enable = true;
+    power-profiles-daemon.enable = false; # Clashes with auto-cpu-freq
     auto-cpufreq = {
       enable = true;
       settings = {
