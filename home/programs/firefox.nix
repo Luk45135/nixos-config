@@ -50,7 +50,6 @@
         fastforwardteam
         mal-sync
         omnivore
-        privacy-badger
         return-youtube-dislikes
         sponsorblock
         startpage-private-search
