@@ -3,7 +3,8 @@
   
   home.packages = with pkgs; [
     prismlauncher
-    temurin-bin-17
+    temurin-bin # Java 21 for new versions of minecraft
+    #temurin-bin-17
     #temurin-bin-8
     lumafly
     lutris
