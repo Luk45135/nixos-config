@@ -80,6 +80,8 @@
     btop
     wget
 
+    wineWowPackages.waylandFull
+
     gnomeExtensions.gsconnect
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.window-gestures
