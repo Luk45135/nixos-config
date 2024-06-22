@@ -1,11 +1,8 @@
 { config, pkgs, inputs, ... }:
 {
-  
+
   home.packages = with pkgs; [
-    prismlauncher
-    temurin-bin # Java 21 for new versions of minecraft
-    #temurin-bin-17
-    #temurin-bin-8
+    (prismlauncher.override { jdks = [ temurin-bin temurin-bin-17 temurin-bin-8 ]; })
     lumafly
     lutris
     mangohud
