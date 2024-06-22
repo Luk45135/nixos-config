@@ -1,13 +1,12 @@
 { config, pkgs, ... }: {
-  
+
   boot = {
     kernelPackages = pkgs.linuxPackages_latest; # Xe drivers only work on 6.8 and up
     initrd.kernelModules = [ "xe" ];
   };
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-vaapi-driver
       libvdpau-va-gl
