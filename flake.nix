@@ -16,7 +16,7 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { nixpkgs, ... }@inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};

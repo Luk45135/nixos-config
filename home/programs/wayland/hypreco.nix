@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   palette = inputs.nix-colors.colorSchemes.catppuccin-mocha.palette;
