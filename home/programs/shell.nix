@@ -36,6 +36,10 @@
       };
       shellAliases = {
         fk = "fuck";
+	      diff = "batdiff";
+	      man = "batman";
+	      grep = "batgrep";
+	      watch = "batwatch";
       };
     };
     eza = {
@@ -56,6 +60,22 @@
         "--cmd cd"
       ];
     };
+    bat = {
+      enable = true;
+      config.theme = "catppuccin";
+      themes = {
+        catppuccin = {
+          src = pkgs.fetchFromGitHub {
+            owner = "catppuccin";
+	    repo = "bat";
+	    rev = "d714cc1d358ea51bfc02550dabab693f70cccea0";
+	    sha256 = "sha256-Q5B4NDrfCIK3UAMs94vdXnR42k4AXCqZz6sRn8bzmf4=";
+	  };
+        file = "themes/Catppuccin Mocha.tmTheme";
+	};
+      };
+      extraPackages = with pkgs.bat-extras; [ batdiff batman batgrep batwatch ];
+    };
     thefuck = {
       enable = true;
       enableZshIntegration = true;
@@ -65,5 +85,6 @@
     tlrc
     nix-output-monitor
     nvd
+    ouch
   ];
 }
