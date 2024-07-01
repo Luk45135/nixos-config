@@ -8,6 +8,7 @@
     ../programs/git.nix
     ../programs/firefox.nix
     ../programs/mpv.nix
+    ../programs/nixvim/nixvim.nix
     
   ];
 
