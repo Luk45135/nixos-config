@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 {
-  
+
+  imports = [
+    ./nixvim/nixvim.nix
+  ];
+
   programs = {
     starship = {
       enable = true;

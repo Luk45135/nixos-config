@@ -10,7 +10,6 @@
     ../programs/mpv.nix
     ../programs/gaming.nix
     ../programs/wayland/hypreco.nix
-    ../programs/nixvim/nixvim.nix
 
     ../services/kdeconnect.nix
     
