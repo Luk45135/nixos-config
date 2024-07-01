@@ -15,7 +15,7 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
     #package = config.boot.kernelPackages.nvidiaPackages.mkDriver { # Stable 535 Drivers
     #  version = "535.154.05";
     #  sha256_64bit = "sha256-fpUGXKprgt6SYRDxSCemGXLrEsIA6GOinp+0eGbqqJg=";
