@@ -12,6 +12,10 @@
       mapleader = " ";
       maplocalleader = " ";
     };
+    opts = {
+      number = true;
+      relativenumber = true;
+    };
     colorschemes.catppuccin.enable = true;
     plugins = {
       lsp = {
