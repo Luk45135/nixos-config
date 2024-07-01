@@ -24,6 +24,7 @@
       telescope = {
         enable = true;
 	      keymaps = {
+	        "<leader>gf" = "git_files";
 	        "<leader>fg" = "live_grep";
 	        "<leader>ff" = "find_files";
 	      };
