@@ -6,7 +6,8 @@
 
   programs.nixvim = {
     enable = true;
-
+    
+    defaultEditor = true;
     extraPackages = with pkgs; [ ripgrep ];
     globals = {
       mapleader = " ";
