@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./completion.nix
   ];
 
   programs.nixvim = {
@@ -25,9 +26,6 @@
 	        nixd.enable = true;
 	      };
       };
-      cmp.enable = true;
-      cmp-nvim-lsp.enable = true;
-      cmp-nvim-ultisnips.enable = true;
       treesitter.enable = true;
       telescope = {
         enable = true;
