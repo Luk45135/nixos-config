@@ -36,10 +36,11 @@
       };
       shellAliases = {
         fk = "fuck";
-	      diff = "batdiff";
-	      man = "batman";
-	      grep = "batgrep";
-	      watch = "batwatch";
+	      cat = "bat";
+        diff = "batdiff";
+        man = "batman";
+        grep = "batgrep";
+        watch = "batwatch";
       };
     };
     eza = {
