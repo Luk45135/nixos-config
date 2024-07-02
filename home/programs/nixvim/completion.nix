@@ -22,10 +22,8 @@
           __raw = ''
             cmp.config.sources({
               { name = 'nvim_lsp' },
-              { name = 'vsnip' },
-              -- { name = 'luasnip' },
-              -- { name = 'ultisnips' },
-              -- { name = 'snippy' },
+              { name = 'luasnip' },
+              { name = 'ultisnips' },
             }, {
               { name = 'buffer' },
             })
