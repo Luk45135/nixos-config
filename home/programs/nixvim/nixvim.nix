@@ -25,16 +25,19 @@
 	        nixd.enable = true;
 	      };
       };
+      cmp.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-nvim-ultisnips.enable = true;
       treesitter.enable = true;
       telescope = {
         enable = true;
-	      keymaps = {
-	        "<leader>gf" = "git_files";
-	        "<leader>fg" = "live_grep";
-	        "<leader>ff" = "find_files";
-	      };
+	  keymaps = {
+	    "<leader>gf" = "git_files";
+	    "<leader>fg" = "live_grep";
+	    "<leader>ff" = "find_files";
+	  };
       };
-      lightline.enable = true;
+      lualine.enable = true;
     };
   };
 }
