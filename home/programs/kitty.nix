@@ -9,8 +9,11 @@ in {
 
   programs.kitty = {
     enable = true;
+    font = {
+      name = "JetBrainsMono NFM";
+      size = 12;
+    };
     settings = {
-      font_family = "JetBrainsMono NFM";
       confirm_os_window_close = 0;
       foreground = "#${palette.base05}";
       background = "#${palette.base00}";
