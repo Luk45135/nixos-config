@@ -10,7 +10,7 @@ in {
   programs.kitty = {
     enable = true;
     settings = {
-      font_family = "Noto";
+      font_family = "JetBrainsMono NFM";
       confirm_os_window_close = 0;
       foreground = "#${palette.base05}";
       background = "#${palette.base00}";
