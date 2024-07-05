@@ -38,6 +38,7 @@
 	    "<leader>ff" = "find_files";
 	  };
       };
+      nvim-autopairs.enable = true;
       lualine.enable = true;
     };
   };
