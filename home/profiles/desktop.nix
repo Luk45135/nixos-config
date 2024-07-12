@@ -41,7 +41,7 @@
       filezilla
       #lmstudio
       obs-studio
-      picard
+      #picard
       scrcpy
       signal-desktop
       whatsapp-for-linux
