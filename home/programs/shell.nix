@@ -78,7 +78,7 @@
       extraPackages = with pkgs.bat-extras; [ batdiff batman batgrep batwatch ];
     };
     thefuck = {
-      enable = false;
+      enable = true;
       enableZshIntegration = true;
     };
   };
