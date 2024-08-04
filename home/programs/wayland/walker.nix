@@ -7,6 +7,5 @@
   programs.walker = {
     enable = false; #wait until hm fix
     runAsService = true;
-    style = "";
   };
 }
