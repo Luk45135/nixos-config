@@ -11,6 +11,7 @@ in {
     ./rofi.nix
     ./waybar.nix
     ./wlogout.nix
+    ./walker.nix
 
     inputs.nix-colors.homeManagerModules.default
   ];

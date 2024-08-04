@@ -19,6 +19,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    walker.url = "github:abenz1267/walker";
   };
 
   outputs = { nixpkgs, ... }@inputs: {
