@@ -1,11 +1,12 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.walker.homeManagerModules.walker
+    inputs.walker.homeManagerModules.default
   ];
 
   programs.walker = {
-    enable = false; #wait until hm fix
+    enable = true;
     runAsService = true;
+    config.theme = "catppuccin";
   };
 }
