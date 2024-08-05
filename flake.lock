@@ -540,11 +540,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1722878136,
-        "narHash": "sha256-Zk41KjrWKI9/7eI+ZKxbwM3vKFUMvYUsdZK1qbJU5NI=",
+        "lastModified": 1722888697,
+        "narHash": "sha256-GFYrDogUPWhdAspX/4sJdxwTxZsB/i7nUSCif7w9SGE=",
         "owner": "abenz1267",
         "repo": "walker",
-        "rev": "c9bdb62c9e77f74c3d97a8199e9f84c7bae7151f",
+        "rev": "44def2aa4a34d53467d5cf658eb74c0e2f0d4239",
         "type": "github"
       },
       "original": {
