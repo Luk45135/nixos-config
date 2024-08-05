@@ -6,7 +6,8 @@
     shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
-      "wheel" 
+      "wheel"
+      "uinput"
     ];
   };
   programs.zsh.enable = true;

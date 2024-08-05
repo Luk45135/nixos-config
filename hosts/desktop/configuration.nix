@@ -27,6 +27,7 @@
       ../../system/services/flatpak.nix
       ../../system/services/pipewire.nix
       ../../system/services/syncthing.nix
+      ../../system/services/kanata.nix
 
       inputs.home-manager.nixosModules.default
     ];
