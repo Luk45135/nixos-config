@@ -81,7 +81,8 @@
     btop
     wget
 
-    wineWowPackages.waylandFull
+    wineWowPackages.unstable
+    steam-run
 
     gnomeExtensions.gsconnect
     gnomeExtensions.tray-icons-reloaded
@@ -91,6 +92,8 @@
   ];
 
   hardware.sensor.iio.enable = true;
+  
+  programs.nix-ld.enable = true;
 
   services.syncthing = { # Syncthing
     enable = true;
