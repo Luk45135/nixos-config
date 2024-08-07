@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   programs = {
     gamemode.enable = true; # Enable Gamemode
     steam = {

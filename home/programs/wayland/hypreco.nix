@@ -1,11 +1,11 @@
-{ pkgs, inputs, ... }:
-
-let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   palette = inputs.nix-colors.colorSchemes.catppuccin-mocha.palette;
 in {
-
   imports = [
-
     ../kitty.nix
 
     ./waybar.nix
@@ -15,13 +15,12 @@ in {
     inputs.nix-colors.homeManagerModules.default
   ];
 
-
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     systemd = {
       enable = true;
-      variables = [ "--all" ];
+      variables = ["--all"];
     };
     plugins = [
       # hyprplugins.hyprtrails
@@ -88,40 +87,41 @@ in {
         pseudotile = "yes";
         preserve_split = "yes";
       };
-      bind = [
-        "$mainMod, D, exec, kitty"
-        "$mainMod, C, killactive, "
-        "$mainMod, E, exec, thunar"
-        "$mainMod, W, exec, firefox"
-        "$mainMod, SPACE, exec, walker"
-        "$mainMod, code:60, exec, walker -m emojis"
-        "$mainMod, TAB, workspace, m+1"
-        "$mainMod + SHIFT, TAB, workspace, m-1"
-        "$mainMod, V, togglefloating,"
-        "$mainMod, F, fullscreen"
-        " , Print, exec, grimblast --freeze copysave area"
-        "$mainMod , Print, exec, grimblast --freeze copysave output"
-        "ALT, Tab, cyclenext,"
-        "ALT, Tab, bringactivetotop,"
-        "ALT Shift, Tab, cyclenext, prev"
-        "ALT Shift, Tab, bringactivetotop"
-      ]
-      ++ (
-        # workspaces
-        # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
-        builtins.concatLists (builtins.genList (
-            x: let
-              ws = let
-                c = (x + 1) / 10;
-              in
-                builtins.toString (x + 1 - (c * 10));
-            in [
-              "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
-              "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-            ]
-          )
-          10)
-      );
+      bind =
+        [
+          "$mainMod, D, exec, kitty"
+          "$mainMod, C, killactive, "
+          "$mainMod, E, exec, thunar"
+          "$mainMod, W, exec, firefox"
+          "$mainMod, SPACE, exec, walker"
+          "$mainMod, code:60, exec, walker -m emojis"
+          "$mainMod, TAB, workspace, m+1"
+          "$mainMod + SHIFT, TAB, workspace, m-1"
+          "$mainMod, V, togglefloating,"
+          "$mainMod, F, fullscreen"
+          " , Print, exec, grimblast --freeze copysave area"
+          "$mainMod , Print, exec, grimblast --freeze copysave output"
+          "ALT, Tab, cyclenext,"
+          "ALT, Tab, bringactivetotop,"
+          "ALT Shift, Tab, cyclenext, prev"
+          "ALT Shift, Tab, bringactivetotop"
+        ]
+        ++ (
+          # workspaces
+          # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
+          builtins.concatLists (builtins.genList (
+              x: let
+                ws = let
+                  c = (x + 1) / 10;
+                in
+                  builtins.toString (x + 1 - (c * 10));
+              in [
+                "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+                "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              ]
+            )
+            10)
+        );
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
@@ -133,14 +133,13 @@ in {
     '';
   };
 
-
   services.hyprpaper = {
     enable = true;
     settings = {
       ipc = "off";
       splash = false;
       splash_offset = 2.0;
-      preload = [ "~/Pictures/system/wallpapers/nix-owo-upscaled.png" ];
+      preload = ["~/Pictures/system/wallpapers/nix-owo-upscaled.png"];
       wallpaper = [
         "DVI-D-1,~/Pictures/system/wallpapers/nix-owo-upscaled.png"
         "HDMI-A-1,~/Pictures/system/wallpapers/nix-owo-upscaled.png"
@@ -148,14 +147,15 @@ in {
     };
   };
 
-  home.file = { # Hyprlock
+  home.file = {
+    # Hyprlock
     ".config/hypr/hyprlock.conf".text = ''
       background {
           monitor =
           color = rgb(${palette.base00})
       #    path = $HOME/.cache/blurred_wallpaper.png   # only png supported for now
       }
-      
+
       input-field {
           monitor =
           size = 200, 50
@@ -185,7 +185,7 @@ in {
           halign = center
           valign = center
       }
-      
+
       label {
           monitor =
           text = cmd[update:1000] echo "$TIME"
@@ -198,7 +198,7 @@ in {
           shadow_passes = 5
           shadow_size = 10
       }
-      
+
       label {
           monitor =
           text = $USER
@@ -211,7 +211,7 @@ in {
           shadow_passes = 5
           shadow_size = 10
       }
-      
+
       image {
           monitor =
           path = $HOME/Pictures/system/profile.png
@@ -228,6 +228,4 @@ in {
       }
     '';
   };
-
-
 }

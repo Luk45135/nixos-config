@@ -1,14 +1,15 @@
-{ pkgs, inputs, ... }:
-
 {
-
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.firefox = {
     enable = true;
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       EnableTrackingProtection = {
-        Value= true;
+        Value = true;
         Locked = true;
         Cryptomining = true;
         Fingerprinting = true;
@@ -27,20 +28,28 @@
         # default = "Startpage - English";
         engines = {
           "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages";
-              params = [
-                { name = "type"; value = "packages"; }
-                { name = "query"; value = "{searchTerms}"; }
-              ];
-            }];
-  
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = [ "@np" ];
+            definedAliases = ["@np"];
           };
         };
       };
-      
+
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         bitwarden
         buster-captcha-solver
@@ -60,5 +69,4 @@
       ];
     };
   };
-  
 }

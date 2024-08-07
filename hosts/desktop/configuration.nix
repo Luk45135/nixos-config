@@ -1,39 +1,38 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
 
-      ../../system/core/boot.nix
-      ../../system/core/locale.nix
-      ../../system/core/user.nix
-      ../../system/core/fonts.nix
+    ../../system/core/boot.nix
+    ../../system/core/locale.nix
+    ../../system/core/user.nix
+    ../../system/core/fonts.nix
 
-      ../../system/nix/nixpkgs.nix
-      ../../system/nix/nh.nix
+    ../../system/nix/nixpkgs.nix
+    ../../system/nix/nh.nix
 
-      ../../system/hardware/nvidia.nix
-      ../../system/hardware/ssd.nix
+    ../../system/hardware/nvidia.nix
+    ../../system/hardware/ssd.nix
 
-      ../../system/programs/steam.nix
+    ../../system/programs/steam.nix
 
-      ../../system/services/X11.nix
-      ../../system/services/printing.nix
-      ../../system/services/flatpak.nix
-      ../../system/services/pipewire.nix
-      ../../system/services/syncthing.nix
-      ../../system/services/kanata.nix
+    ../../system/services/X11.nix
+    ../../system/services/printing.nix
+    ../../system/services/flatpak.nix
+    ../../system/services/pipewire.nix
+    ../../system/services/syncthing.nix
+    ../../system/services/kanata.nix
 
-      inputs.home-manager.nixosModules.default
-    ];
-
-  
-
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -49,28 +48,32 @@
       enable = true;
       dns = "systemd-resolved";
     };
-    nameservers = [ "192.168.0.18" ];
+    nameservers = ["192.168.0.18"];
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 53317 ]; # LocalSend
-      allowedUDPPorts = [ 53317 ]; 
+      allowedTCPPorts = [53317]; # LocalSend
+      allowedUDPPorts = [53317];
       allowedTCPPortRanges = [
-        { from = 1714; to = 1764; } # KDE Connect
+        {
+          from = 1714;
+          to = 1764;
+        } # KDE Connect
       ];
       allowedUDPPortRanges = [
-        { from = 1714; to = 1764; } # KDE Connect
+        {
+          from = 1714;
+          to = 1764;
+        } # KDE Connect
       ];
     };
   };
   services.resolved = {
     enable = true;
-    fallbackDns = [ "9.9.9.9" "9.9.9.11" ];
+    fallbackDns = ["9.9.9.9" "9.9.9.11"];
   };
 
-  
-
-  # Services  
+  # Services
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
     libinput.enable = true;
@@ -85,31 +88,26 @@
   # Virtualization
   virtualisation.waydroid.enable = true;
 
-
   programs = {
     hyprland.enable = true;
     hyprlock.enable = true;
   };
 
-  
-  
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true; 
+  # services.xserver.libinput.enable = true;
 
   environment = {
-    shells = [ pkgs.zsh ];
+    shells = [pkgs.zsh];
     localBinInPath = true;
     sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
     };
   };
 
-  
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
@@ -131,7 +129,6 @@
     };
   };
 
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -148,7 +145,7 @@
     libsForQt5.ark
     pavucontrol
     wl-clipboard
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
   services.flatpak.packages = [

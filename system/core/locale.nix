@@ -17,7 +17,7 @@
       LC_TIME = "de_CH.UTF-8";
     };
   };
-  
+
   # Configure console keymap
   console.keyMap = "sg";
 }

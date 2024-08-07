@@ -1,8 +1,7 @@
-{ pkgs, ... }: {
-  
+{pkgs, ...}: {
   environment.systemPackages = [pkgs.git];
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ]; # Enabling nix commands and flakes
+    experimental-features = ["nix-command" "flakes"]; # Enabling nix commands and flakes
     substituters = [
       "https://nix-gaming.cachix.org"
       "https://walker.cachix.org"
@@ -13,5 +12,4 @@
     ];
   };
   nixpkgs.config.allowUnfree = true;
-  
 }

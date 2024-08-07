@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   nixpkgs.config.nvidia.acceptLicense = true;
   hardware.graphics = {
     enable = true;

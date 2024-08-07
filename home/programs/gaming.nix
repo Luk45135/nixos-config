@@ -1,8 +1,10 @@
-{ pkgs, inputs, ... }:
 {
-
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
-    (prismlauncher.override { jdks = [ temurin-bin-21 temurin-bin-17 temurin-bin-8 ]; })
+    (prismlauncher.override {jdks = [temurin-bin-21 temurin-bin-17 temurin-bin-8];})
     lumafly
     lutris
     mangohud
@@ -12,5 +14,4 @@
     ryujinx
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
   ];
-
 }

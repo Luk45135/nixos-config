@@ -1,8 +1,8 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "DroidSansMono" ];})
+    (nerdfonts.override {fonts = ["JetBrainsMono" "DroidSansMono"];})
   ];
 }

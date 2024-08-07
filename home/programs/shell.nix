@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   imports = [
     ./nixvim/nixvim.nix
   ];
@@ -31,12 +28,12 @@
       autocd = true;
       historySubstringSearch = {
         enable = true;
-        searchDownKey = [ "^[[B" "$terminfo[kcud1]" ];
-        searchUpKey = [ "^[[A" "$terminfo[kcuu1]" ];
+        searchDownKey = ["^[[B" "$terminfo[kcud1]"];
+        searchUpKey = ["^[[A" "$terminfo[kcuu1]"];
       };
       shellAliases = {
         fk = "fuck";
-	      cat = "bat";
+        cat = "bat";
         diff = "batdiff";
         man = "batman";
         grep = "batgrep";
@@ -68,14 +65,14 @@
         catppuccin = {
           src = pkgs.fetchFromGitHub {
             owner = "catppuccin";
-	          repo = "bat";
-	          rev = "d714cc1d358ea51bfc02550dabab693f70cccea0";
-	          sha256 = "sha256-Q5B4NDrfCIK3UAMs94vdXnR42k4AXCqZz6sRn8bzmf4=";
-	        };
-            file = "themes/Catppuccin Mocha.tmTheme";
-	      };
+            repo = "bat";
+            rev = "d714cc1d358ea51bfc02550dabab693f70cccea0";
+            sha256 = "sha256-Q5B4NDrfCIK3UAMs94vdXnR42k4AXCqZz6sRn8bzmf4=";
+          };
+          file = "themes/Catppuccin Mocha.tmTheme";
+        };
       };
-      extraPackages = with pkgs.bat-extras; [ batdiff batman batgrep batwatch ];
+      extraPackages = with pkgs.bat-extras; [batdiff batman batgrep batwatch];
     };
     thefuck = {
       enable = true;

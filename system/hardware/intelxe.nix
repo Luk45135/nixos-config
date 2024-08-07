@@ -1,8 +1,7 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   boot = {
     kernelPackages = pkgs.linuxPackages_latest; # Xe drivers only work on 6.8 and up
-    initrd.kernelModules = [ "xe" ];
+    initrd.kernelModules = ["xe"];
   };
   hardware.graphics = {
     enable = true;

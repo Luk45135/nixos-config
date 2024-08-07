@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@inputs: {
+  outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};

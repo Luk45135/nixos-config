@@ -1,14 +1,9 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   imports = [
-    
     ../programs/shell.nix
     ../programs/git.nix
     ../programs/firefox.nix
     ../programs/mpv.nix
-    
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -40,7 +35,6 @@
       color-scheme = "prefer-dark";
     };
   };
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
