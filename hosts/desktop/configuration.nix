@@ -30,8 +30,6 @@
     ../../system/services/pipewire.nix
     ../../system/services/syncthing.nix
     ../../system/services/kanata.nix
-
-    inputs.home-manager.nixosModules.default
   ];
 
   # Define your hostname.
