@@ -100,7 +100,7 @@
         pavucontrol
         wl-clipboard
       ];
-      system.nixos.tags = ["Hyprland"];
+      system.nixos.tags = ["hyprland"];
     }; 
     cosmic.configuration = {
       imports = [inputs.nixos-cosmic.nixosModules.default];
@@ -108,14 +108,8 @@
         desktopManager.cosmic.enable = true;
         displayManager.cosmic-greeter.enable = true;
       };
-      system.nixos.tags = ["Cosmic"];
+      system.nixos.tags = ["cosmic"];
     };
-  };
-
-
-  programs = {
-    hyprland.enable = true;
-    hyprlock.enable = true;
   };
 
   # Enable Bluetooth
