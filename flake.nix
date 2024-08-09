@@ -17,6 +17,10 @@
       # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
     nix-gaming = {
       url = "github:fufexan/nix-gaming";

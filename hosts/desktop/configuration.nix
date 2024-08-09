@@ -75,16 +75,43 @@
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
     libinput.enable = true;
-    displayManager.sddm = {
-      enable = true;
-      theme = "chili";
-      wayland.enable = true;
-      #settings = {};
-    };
   };
 
   # Virtualization
   virtualisation.waydroid.enable = true;
+  
+  specialisation = {
+    hyprland.configuration = {
+      services.displayManager.sddm = {
+        enable = true;
+        theme = "chili";
+        wayland.enable = true;
+      };
+      programs = {
+        hyprland.enable = true;
+        hyprlock.enable = true;
+      };
+      environment.systemPackages = with pkgs; [ 
+        sddm-chili-theme
+        gwenview
+        grimblast
+        xfce.thunar
+        libsForQt5.ark
+        pavucontrol
+        wl-clipboard
+      ];
+      system.nixos.tags = ["Hyprland"];
+    }; 
+    cosmic.configuration = {
+      imports = [inputs.nixos-cosmic.nixosModules.default];
+      services = {
+        desktopManager.cosmic.enable = true;
+        displayManager.cosmic-greeter.enable = true;
+      };
+      system.nixos.tags = ["Cosmic"];
+    };
+  };
+
 
   programs = {
     hyprland.enable = true;
@@ -134,15 +161,8 @@
     git
     fastfetch
     btop
-    sddm-chili-theme
     mpv
-    gwenview
     wget
-    grimblast
-    xfce.thunar
-    libsForQt5.ark
-    pavucontrol
-    wl-clipboard
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
