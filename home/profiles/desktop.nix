@@ -5,7 +5,7 @@
     ../programs/firefox.nix
     ../programs/mpv.nix
     ../programs/gaming.nix
-    ../programs/wayland/hypreco.nix
+    ../programs/kitty.nix
 
     ../services/kdeconnect.nix
   ];

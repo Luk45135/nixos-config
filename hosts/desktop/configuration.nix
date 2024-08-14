@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.nixos-cosmic.nixosModules.default
 
     ../../system/core/boot.nix
     ../../system/core/locale.nix
@@ -75,42 +76,13 @@
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
     libinput.enable = true;
+    desktopManager.cosmic.enable = true;
+    displayManager.cosmic-greeter.enable = true;
   };
 
   # Virtualization
   virtualisation.waydroid.enable = true;
   
-  specialisation = {
-    hyprland.configuration = {
-      services.displayManager.sddm = {
-        enable = true;
-        theme = "chili";
-        wayland.enable = true;
-      };
-      programs = {
-        hyprland.enable = true;
-        hyprlock.enable = true;
-      };
-      environment.systemPackages = with pkgs; [ 
-        sddm-chili-theme
-        gwenview
-        grimblast
-        xfce.thunar
-        libsForQt5.ark
-        pavucontrol
-        wl-clipboard
-      ];
-      system.nixos.tags = ["hyprland"];
-    }; 
-    cosmic.configuration = {
-      imports = [inputs.nixos-cosmic.nixosModules.default];
-      services = {
-        desktopManager.cosmic.enable = true;
-        displayManager.cosmic-greeter.enable = true;
-      };
-      system.nixos.tags = ["cosmic"];
-    };
-  };
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
