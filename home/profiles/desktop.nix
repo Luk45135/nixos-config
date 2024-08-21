@@ -14,14 +14,6 @@
     username = "lukasd";
     homeDirectory = "/home/lukasd";
     stateVersion = "23.11"; # Don't change this!
-    pointerCursor = {
-      # Configure Cursor Theme
-      gtk.enable = true;
-      x11.enable = true;
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 24;
-    };
     packages = with pkgs; [
       brave #temp because of firefox crashes
       # kate
@@ -51,28 +43,8 @@
   };
 
   # Theming
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-      name = "adwaita-dark";
-      # package = pkgs.adwaita-qt;
-    };
-  };
   gtk = {
     enable = true;
-    font = {
-      name = "Noto";
-      size = 12;
-    };
-    theme = {
-      package = pkgs.adw-gtk3;
-      name = "adw-gtk3";
-    };
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus";
-    };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
     };
