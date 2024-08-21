@@ -40,7 +40,7 @@
       picard
       scrcpy
       signal-desktop
-      whatsapp-for-linux
+      zapzap
       obsidian
       localsend
       thunderbird
