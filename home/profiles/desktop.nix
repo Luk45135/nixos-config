@@ -19,7 +19,7 @@
       x11.enable = true;
       package = pkgs.vimix-cursor-theme;
       name = "Vimix Cursors";
-      size = 24;
+      size = 16;
     };
     packages = with pkgs; [
       brave #temp because of firefox crashes
@@ -50,6 +50,7 @@
   };
 
   # Theming
+  qt.enable = true;
   gtk = {
     enable = true;
     gtk3.extraConfig = {
