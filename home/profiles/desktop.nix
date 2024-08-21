@@ -14,6 +14,13 @@
     username = "lukasd";
     homeDirectory = "/home/lukasd";
     stateVersion = "23.11"; # Don't change this!
+    pointerCursor = {
+      gtk.enable = true;
+      x11.enable = true;
+      package = pkgs.vimix-cursor-theme;
+      name = "Vimix Cursors";
+      size = 24;
+    };
     packages = with pkgs; [
       brave #temp because of firefox crashes
       # kate
