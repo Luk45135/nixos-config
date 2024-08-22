@@ -1,5 +1,11 @@
 {...}: {
   programs.nixvim.plugins = {
+    lsp = {
+      enable = true;
+      servers = {
+        nixd.enable = true;
+      };
+    };
     cmp = {
       enable = true;
       settings = {
@@ -15,7 +21,11 @@
         snippet = {
           expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         };
-        autoEnableSources = true;
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "luasnip"; }
+          { name = "ultisnips"; }
+        ];
       };
     };
     cmp-nvim-lsp.enable = true;

@@ -26,12 +26,6 @@
     };
     colorschemes.catppuccin.enable = true;
     plugins = {
-      lsp = {
-        enable = true;
-        servers = {
-          nixd.enable = true;
-        };
-      };
       treesitter.enable = true;
       telescope = {
         enable = true;
@@ -44,6 +38,14 @@
       surround.enable = true;
       nvim-autopairs.enable = true;
       lualine.enable = true;
+      yanky = {
+        enable = true;
+        settings.highlight = {
+          on_put = true;
+          on_yank = true;
+          timer = 500;
+        };
+      };
     };
   };
 }
