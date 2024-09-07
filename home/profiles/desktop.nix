@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
     ../programs/shell.nix
     ../programs/git.nix
@@ -46,6 +46,7 @@
       thunderbird
       qbittorrent
       yt-dlp
+      inputs.zen-browser.packages."${system}".generic
     ];
   };
 
