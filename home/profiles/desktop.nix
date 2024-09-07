@@ -23,7 +23,6 @@
       size = 24;
     };
     packages = with pkgs; [
-      brave #temp because of firefox crashes
       # kate
       vesktop
       vscode
