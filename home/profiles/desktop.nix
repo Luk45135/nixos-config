@@ -25,7 +25,6 @@
       # kate
       vesktop
       vscode
-      zed-editor
       onlyoffice-bin_latest
       anydesk
       # davinci-resolve
