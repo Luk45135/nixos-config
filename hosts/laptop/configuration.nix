@@ -58,7 +58,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-
+  
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -74,7 +74,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     vscode
     git
     fastfetch
@@ -83,13 +83,13 @@
 
     wineWowPackages.unstable
     steam-run
+    
+  ]) ++ (with pkgs.gnomeExtensions; [
+    gsconnect
+    tray-icons-reloaded
+    window-gestures
+  ]);
 
-    gnomeExtensions.gsconnect
-    gnomeExtensions.tray-icons-reloaded
-    gnomeExtensions.window-gestures
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-  ];
 
   hardware.sensor.iio.enable = true;
 
