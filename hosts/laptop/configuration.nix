@@ -27,6 +27,7 @@
     ../../system/services/pipewire.nix
     ../../system/services/twingate.nix
     ../../system/services/kanata.nix
+    ../../system/services/nixos-cli.nix 
   ];
 
   networking = {
