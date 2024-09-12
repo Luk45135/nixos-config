@@ -31,6 +31,7 @@
     ../../system/services/pipewire.nix
     ../../system/services/syncthing.nix
     ../../system/services/kanata.nix
+    ../../system/services/nixos-cli.nix
   ];
 
   # Define your hostname.

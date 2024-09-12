@@ -24,6 +24,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+    nixos-cli.url = "github:water-sucks/nixos";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {
