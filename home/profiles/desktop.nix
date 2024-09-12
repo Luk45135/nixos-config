@@ -17,9 +17,9 @@
     pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
-      package = pkgs.vimix-cursor-theme;
-      name = "Vimix Cursors";
-      size = 16;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
     };
     packages = with pkgs; [
       # kate
