@@ -133,7 +133,7 @@
   ];
 
   services.flatpak.packages = [
-    "io.github.lime3ds.Lime3DS"
+    #"io.github.lime3ds.Lime3DS"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
