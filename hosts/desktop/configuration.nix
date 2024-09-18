@@ -133,6 +133,7 @@
   ];
 
   services.flatpak.packages = [
+    "io.github.zen_browser.zen"
     #"io.github.lime3ds.Lime3DS"
   ];
 
