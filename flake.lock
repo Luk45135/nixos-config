@@ -604,22 +604,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1725634671,
-        "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "574d1eac1c200690e27b8eb4e24887f8df7ac27c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -635,11 +619,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1726630837,
-        "narHash": "sha256-oZQD2Manl2MaX9xhLpEpVLJCODS053N+SGqolyRw6WA=",
+        "lastModified": 1726676531,
+        "narHash": "sha256-i8Pbd7JszwuCb0HqzAPypv2ytdcsFeAMFqbrmLaN4BE=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "650e204c071a0faaf1f4073f5a0f0536cd738fed",
+        "rev": "9307b201a3dc57d5b71ded4f897ea9d096544877",
         "type": "github"
       },
       "original": {
@@ -680,8 +664,7 @@
         "nixos-cli": "nixos-cli",
         "nixos-cosmic": "nixos-cosmic",
         "nixpkgs": "nixpkgs_4",
-        "nixvim": "nixvim",
-        "zen-browser": "zen-browser"
+        "nixvim": "nixvim"
       }
     },
     "rust-overlay": {
@@ -786,24 +769,6 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_5"
-      },
-      "locked": {
-        "lastModified": 1726001766,
-        "narHash": "sha256-ADvEWfo0AuHR06ah1nnzOyhsG05/b5QpUc7vFNbiEfM=",
-        "owner": "MarceColl",
-        "repo": "zen-browser-flake",
-        "rev": "06505a088396e2c0b9ad100302502783a6bcdb40",
-        "type": "github"
-      },
-      "original": {
-        "owner": "MarceColl",
-        "repo": "zen-browser-flake",
-        "type": "github"
       }
     },
     "zig-deps-fod": {
