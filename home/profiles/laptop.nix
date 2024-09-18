@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}: {
+{pkgs, ...}: {
   imports = [
     ../programs/shell.nix
     ../programs/git.nix
@@ -24,7 +24,6 @@
       localsend
       thunderbird
       stremio
-      inputs.zen-browser.packages."${system}".generic
     ];
   };
 

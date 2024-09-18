@@ -91,6 +91,9 @@
     window-gestures
   ]);
 
+  services.flatpak.packages = [
+    "io.github.zen_browser.zen"
+  ];
 
   hardware.sensor.iio.enable = true;
 
