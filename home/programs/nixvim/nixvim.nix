@@ -35,7 +35,8 @@
           "<leader>ff" = "find_files";
         };
       };
-      surround.enable = true;
+      web-devicons.enable = true;
+      vim-surround.enable = true;
       nvim-autopairs.enable = true;
       lualine.enable = true;
       yanky = {
