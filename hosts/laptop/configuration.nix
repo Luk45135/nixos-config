@@ -90,6 +90,7 @@
     gsconnect
     tray-icons-reloaded
     window-gestures
+    battery-usage-wattmeter
   ]);
 
   services.flatpak.packages = [
