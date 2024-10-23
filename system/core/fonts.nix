@@ -4,5 +4,6 @@
     noto-fonts-cjk
     noto-fonts-emoji
     (nerdfonts.override {fonts = ["JetBrainsMono" "DroidSansMono"];})
+    roboto
   ];
 }
