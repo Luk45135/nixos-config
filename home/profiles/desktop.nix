@@ -22,10 +22,10 @@
       size = 24;
     };
     packages = with pkgs; [
-      # kate
+      okular
       vesktop
       vscode
-      onlyoffice-bin_latest
+      libreoffice
       anydesk
       # davinci-resolve
       feishin
