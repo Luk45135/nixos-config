@@ -97,6 +97,7 @@
     localBinInPath = true;
     sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
+      COSMIC_DATA_CONTROL_ENABLED = 1;
     };
   };
 
