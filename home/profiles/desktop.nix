@@ -5,7 +5,7 @@
     ../programs/firefox.nix
     ../programs/mpv.nix
     ../programs/gaming.nix
-    ../programs/wayland/hypreco.nix
+    ../programs/kitty.nix
 
     ../services/kdeconnect.nix
   ];
@@ -15,7 +15,6 @@
     homeDirectory = "/home/lukasd";
     stateVersion = "23.11"; # Don't change this!
     pointerCursor = {
-      # Configure Cursor Theme
       gtk.enable = true;
       x11.enable = true;
       package = pkgs.bibata-cursors;
@@ -23,11 +22,10 @@
       size = 24;
     };
     packages = with pkgs; [
-      # kate
+      okular
       vesktop
       vscode
-      zed-editor
-      onlyoffice-bin_latest
+      libreoffice
       anydesk
       # davinci-resolve
       feishin
@@ -40,7 +38,7 @@
       picard
       scrcpy
       signal-desktop
-      whatsapp-for-linux
+      zapzap
       obsidian
       localsend
       thunderbird
@@ -50,28 +48,9 @@
   };
 
   # Theming
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-      name = "adwaita-dark";
-      # package = pkgs.adwaita-qt;
-    };
-  };
+  qt.enable = true;
   gtk = {
     enable = true;
-    font = {
-      name = "Noto";
-      size = 12;
-    };
-    theme = {
-      package = pkgs.adw-gtk3;
-      name = "adw-gtk3";
-    };
-    iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus";
-    };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
     };

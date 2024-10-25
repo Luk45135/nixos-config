@@ -4,6 +4,7 @@
       enable = true;
       servers = {
         nixd.enable = true;
+        pylsp.enable = true;
       };
     };
     cmp = {

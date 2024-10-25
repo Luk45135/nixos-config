@@ -12,7 +12,8 @@
     dolphin-emu
     cemu
     ryujinx
-    lime3ds
+    #lime3ds
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    steamtinkerlaunch
   ];
 }

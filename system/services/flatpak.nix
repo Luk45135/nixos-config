@@ -7,6 +7,10 @@
         location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
       }
     ];
+    update.auto = {
+      enable = true;
+      onCalendar = "weekly";
+    };
     packages = [
     ];
     overrides = {

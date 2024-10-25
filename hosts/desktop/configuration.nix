@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    inputs.nixos-cosmic.nixosModules.default
 
     ../../system/core/boot.nix
     ../../system/core/locale.nix
@@ -76,21 +77,13 @@
   services = {
     ratbagd.enable = true; # Start ratabd service to configure logitech mouse with piper
     libinput.enable = true;
-    displayManager.sddm = {
-      enable = true;
-      theme = "chili";
-      wayland.enable = true;
-      #settings = {};
-    };
+    desktopManager.cosmic.enable = true;
+    displayManager.cosmic-greeter.enable = true;
   };
 
   # Virtualization
   virtualisation.waydroid.enable = true;
-
-  programs = {
-    hyprland.enable = true;
-    hyprlock.enable = true;
-  };
+  
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
@@ -104,6 +97,7 @@
     localBinInPath = true;
     sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
+      COSMIC_DATA_CONTROL_ENABLED = 1;
     };
   };
 
@@ -111,11 +105,10 @@
     enable = true;
     xdgOpenUsePortal = true;
     config = {
-      common.default = ["gtk"];
-      hyprland.default = ["gtk" "hyprland"];
+      common.default = ["cosmic"];
     };
     extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-cosmic
     ];
   };
 
@@ -135,15 +128,8 @@
     git
     fastfetch
     btop
-    sddm-chili-theme
     mpv
-    gwenview
     wget
-    grimblast
-    xfce.thunar
-    libsForQt5.ark
-    pavucontrol
-    wl-clipboard
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
