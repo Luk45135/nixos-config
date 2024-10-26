@@ -97,6 +97,8 @@
     "io.github.zen_browser.zen"
   ];
 
+  virtualisation.waydroid.enable = true;
+
   hardware.sensor.iio.enable = true;
 
   programs.nix-ld.enable = true;
