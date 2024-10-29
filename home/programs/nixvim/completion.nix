@@ -4,7 +4,7 @@
       enable = true;
       servers = {
         nixd.enable = true;
-        pylsp.enable = true;
+        pyright.enable = true;
         typst_lsp.enable = true;
       };
     };
