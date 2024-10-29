@@ -40,15 +40,21 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Networking
   networking = {
     hostName = "nixos";
     networkmanager = {
       enable = true;
-      dns = "systemd-resolved";
+      dns = "none";
     };
-    nameservers = ["192.168.0.18"];
+    nameservers = [
+      "192.168.0.18"
+      "9.9.9.9"
+      "9.9.9.11"
+    ];
+  
+    useDHCP = false;
+    dhcpcd.enable = false;
 
     firewall = {
       enable = true;
@@ -67,10 +73,6 @@
         } # KDE Connect
       ];
     };
-  };
-  services.resolved = {
-    enable = true;
-    fallbackDns = ["9.9.9.9" "9.9.9.11"];
   };
 
   # Services
