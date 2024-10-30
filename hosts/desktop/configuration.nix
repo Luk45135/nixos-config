@@ -24,6 +24,7 @@
     ../../system/hardware/ssd.nix
 
     ../../system/programs/steam.nix
+    ../../system/programs/ssh.nix
 
     ../../system/services/X11.nix
     ../../system/services/printing.nix

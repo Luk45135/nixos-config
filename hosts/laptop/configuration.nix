@@ -22,6 +22,8 @@
     ../../system/hardware/battery.nix
     ../../system/hardware/ssd.nix
 
+    ../../system/programs/ssh.nix
+
     ../../system/services/X11.nix
     ../../system/services/printing.nix
     ../../system/services/pipewire.nix
