@@ -32,6 +32,7 @@
     ../../system/services/syncthing.nix
     ../../system/services/kanata.nix
     ../../system/services/nixos-cli.nix
+    ../../system/services/sunshine.nix
   ];
 
   # Define your hostname.
