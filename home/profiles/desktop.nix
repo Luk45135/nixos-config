@@ -8,6 +8,8 @@
     ../programs/kitty.nix
 
     ../services/kdeconnect.nix
+
+    ../core/xdg.nix
   ];
 
   home = {
