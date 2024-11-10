@@ -27,6 +27,7 @@
       shiftwidth = 2;
       tabstop = 2;
     };
+    clipboard.providers.wl-copy.enable = true;
     colorschemes.catppuccin.enable = true;
     plugins = {
       treesitter.enable = true;
