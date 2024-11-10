@@ -12,7 +12,10 @@
     enable = true;
 
     defaultEditor = true;
-    extraPackages = with pkgs; [ripgrep];
+    extraPackages = with pkgs; [
+      ripgrep
+      fd
+    ];
     globals = {
       mapleader = " ";
       maplocalleader = " ";
