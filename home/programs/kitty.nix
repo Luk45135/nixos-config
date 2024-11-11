@@ -13,6 +13,7 @@ in {
     };
     settings = {
       confirm_os_window_close = 0;
+      hide_window_decorations = "yes";
       foreground = "#${palette.base05}";
       background = "#${palette.base00}";
       # ...
