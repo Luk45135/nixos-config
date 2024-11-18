@@ -138,6 +138,7 @@
 
   services.flatpak.packages = [
     "io.github.zen_browser.zen"
+    "io.github.everestapi.Olympus"
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
