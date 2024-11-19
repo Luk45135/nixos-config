@@ -23,7 +23,6 @@
       signal-desktop
       whatsapp-for-linux
       obsidian
-      localsend
       thunderbird
       stremio
     ];

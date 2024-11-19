@@ -42,7 +42,6 @@
       signal-desktop
       zapzap
       obsidian
-      localsend
       thunderbird
       qbittorrent
       yt-dlp

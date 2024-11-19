@@ -22,6 +22,8 @@
     ../../system/hardware/battery.nix
     ../../system/hardware/ssd.nix
 
+    ../../system/programs/localsend.nix
+
     ../../system/services/X11.nix
     ../../system/services/printing.nix
     ../../system/services/pipewire.nix
@@ -36,8 +38,6 @@
     networkmanager.enable = true;
     firewall = {
       enable = true;
-      allowedTCPPorts = [53317]; # LocalSend
-      allowedUDPPorts = [53317];
       allowedTCPPortRanges = [
         {
           from = 1714;
