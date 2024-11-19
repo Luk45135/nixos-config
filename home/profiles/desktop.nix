@@ -36,7 +36,6 @@
       ffmpeg
       filezilla
       #lmstudio
-      obs-studio
       picard
       scrcpy
       signal-desktop

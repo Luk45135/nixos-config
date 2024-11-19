@@ -25,6 +25,7 @@
 
     ../../system/programs/steam.nix
     ../../system/programs/localsend.nix
+    ../../system/programs/obs-studio.nix
 
     ../../system/services/X11.nix
     ../../system/services/printing.nix
