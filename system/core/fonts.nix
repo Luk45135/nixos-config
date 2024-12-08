@@ -1,11 +1,12 @@
 {pkgs, ...}: {
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    (nerdfonts.override {fonts = ["JetBrainsMono" "DroidSansMono"];})
-    roboto
-    source-sans
-    source-sans-pro
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.droid-sans-mono
+      roboto
+      source-sans
+      source-sans-pro
+    ];
+  };
 }
