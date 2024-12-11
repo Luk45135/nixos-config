@@ -5,7 +5,7 @@
       servers = {
         nixd.enable = true;
         pyright.enable = true;
-        typst_lsp.enable = true;
+        tinymist.enable = true;
       };
     };
     cmp = {
