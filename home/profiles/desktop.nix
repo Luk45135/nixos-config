@@ -32,7 +32,6 @@
       # davinci-resolve
       feishin
       # sonixd
-      streamrip
       ffmpeg
       filezilla
       #lmstudio
