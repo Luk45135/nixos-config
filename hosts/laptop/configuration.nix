@@ -82,6 +82,7 @@
     fastfetch
     btop
     wget
+    inputs.zen-browser.packages.${pkgs.system}.default    
 
     wineWowPackages.unstable
     steam-run
@@ -94,7 +95,6 @@
   ]);
 
   services.flatpak.packages = [
-    "io.github.zen_browser.zen"
   ];
 
   virtualisation.waydroid.enable = true;
