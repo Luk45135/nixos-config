@@ -117,11 +117,12 @@
         "fedora-server" = {id = "RRKARZM-CQJRN7C-KO77MSF-R6WB5QM-7T6XR7I-QI7TQ63-SDQCNTR-JS33TQC";};
         "nixos" = {id = "FAUONAQ-QBTFPE6-DO6M77F-VZ4GMT2-FIMVLMC-EATBCGV-A7FKEDZ-TP72DQA";};
         "SM-G985F" = {id = "CHN5RFJ-ULJB47F-5ZXALZ5-G76SS5C-4PEUPIB-5P4AV6N-DH752CE-SLPKRAY";};
+        "SM-S921B" = {id = "FY4KWCS-QEKNNQ6-T3EUMDE-KZW5QQL-UYKAXUJ-O54YP4E-D6PHPXC-3J6OLQS";};
       };
       folders = {
         "Syncthing" = {
           path = "/home/lukasd/Documents/Syncthing";
-          devices = ["fedora-server" "nixos" "SM-G985F"];
+          devices = ["fedora-server" "nixos" "SM-G985F" "SM-S921B"];
         };
       };
       gui = {
