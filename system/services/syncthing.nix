@@ -28,6 +28,10 @@
           path = "/home/lukasd/Pictures/PhoneCamera";
           devices = ["SM-G985F"];
         };
+        "S24Pictures" = {
+          path = "/home/lukasd/Pictures/S24Pictures";
+          devices = ["SM-S921B"];
+        };
       };
       gui = {
         user = "lukasd";
