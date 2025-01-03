@@ -43,6 +43,7 @@
       thunderbird
       qbittorrent
       yt-dlp
+      inputs.zen-browser.packages.${pkgs.system}.default
     ];
   };
 
