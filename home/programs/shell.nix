@@ -40,6 +40,19 @@
         watch = "batwatch";
       };
     };
+    tmux = {
+      enable = true;
+      clock24 = true;
+      baseIndex = 1;
+      mouse = true;
+      shell = "${pkgs.zsh}/bin/zsh";
+      shortcut = "Space";
+      terminal = "screen-256color";
+      sensibleOnTop = true;
+      plugins = with pkgs.tmuxPlugins; [
+        catppuccin
+      ];
+    };
     eza = {
       enable = true;
       enableZshIntegration = true;
