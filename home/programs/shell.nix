@@ -72,7 +72,7 @@
           file = "themes/Catppuccin Mocha.tmTheme";
         };
       };
-      extraPackages = with pkgs.bat-extras; [batman batgrep batwatch]; #batdiff buildfailure
+      extraPackages = with pkgs.bat-extras; [batman batgrep batwatch batdiff];
     };
     thefuck = {
       enable = true;
