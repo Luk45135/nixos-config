@@ -19,6 +19,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
+      "electron-31.7.7"
     ];
   };
   nix.optimise.automatic = true;
