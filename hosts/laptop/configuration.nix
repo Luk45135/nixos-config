@@ -28,7 +28,6 @@
     ../../system/services/printing.nix
     ../../system/services/pipewire.nix
     ../../system/services/flatpak.nix
-    ../../system/services/twingate.nix
     ../../system/services/kanata.nix
     ../../system/services/nixos-cli.nix 
   ];
