@@ -20,6 +20,10 @@
       mapleader = " ";
       maplocalleader = " ";
     };
+    keymaps = [
+      { action = "<C-d>zz"; key = "<C-d>"; }
+      { action = "<C-u>zz"; key = "<C-u>"; }
+    ];
     opts = {
       number = true;
       relativenumber = true;
