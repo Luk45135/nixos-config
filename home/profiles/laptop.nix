@@ -21,7 +21,7 @@
       feishin
       scrcpy
       signal-desktop
-      whatsapp-for-linux
+      wasistlos
       obsidian
       thunderbird
       stremio
