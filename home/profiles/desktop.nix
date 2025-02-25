@@ -24,7 +24,7 @@
       size = 24;
     };
     packages = with pkgs; [
-      okular
+      kdePackages.okular
       vesktop
       vscode
       libreoffice
