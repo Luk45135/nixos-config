@@ -19,7 +19,7 @@
       DisableAccounts = true;
       DisableFirefoxScreenshots = true;
       Preferences = {
-        "browser.startup.homepage" = "https://homepage.local.lukastech.xyz";
+        "browser.startup.homepage" = "https://homepage.local.lukastech.top";
       };
     };
     profiles.lukasd = {
