@@ -18,8 +18,8 @@
     #media-session.enable = true;
     lowLatency = {
       enable = true;
-      #quantum = 64;
-      #rate = 48000;
+      quantum = 32;
+      rate = 48000;
     };
   };
 }
