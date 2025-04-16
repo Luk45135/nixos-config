@@ -22,6 +22,7 @@
 
     ../../system/hardware/nvidia.nix
     ../../system/hardware/ssd.nix
+    ../../system/hardware/sayodevice.nix
 
     ../../system/programs/steam.nix
     ../../system/programs/localsend.nix
