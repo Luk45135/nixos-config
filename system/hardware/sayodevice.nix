@@ -1,52 +1,12 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ ungoogled-chromium ];
-  services.udev.extraRules = ''
-#BlackC Sayobot.cn SayoDevice *std-F*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0005" \
-, MODE="0666"
-
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0004" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *mini*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0003" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *std*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0002" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *std*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0009" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *std*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="8089" \
-, ATTRS{idProduct}=="0004" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *std*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="32905" \
-, ATTRS{idProduct}=="0009" \
-, MODE="0666"
-
-#BlackC Sayobot.cn SayoDevice *std*
-KERNEL=="hidraw*" \
-, ATTRS{idVendor}=="32905" \
-, ATTRS{idProduct}=="0004" \
-, MODE="0666"
-    '';
+  environment.systemPackages = with pkgs; [ ungoogled-chromium ]; # https://sayodevice.com for configuration (chromium based browsers only)
+  services.udev.extraRules = builtins.readFile (
+    pkgs.fetchFromGitHub {
+      owner = "lerh050";
+      repo = "o3c";
+      rev = "1ddf6ef749d70a2bcfe1d7158d0606d19a203a06";
+      sha256 = "sha256-JBUvjE4siAMlSrTXkDKK4W30CjQjts519ZnV58EnbGM=";
+    } + "/98-saybot.rules"
+  );
 }
