@@ -1,7 +1,10 @@
-{inputs, ...}: {
+{inputs, pkgs, ...}: {
   imports = [
     inputs.nix-gaming.nixosModules.pipewireLowLatency
   ];
+  # Install pwvucontroll for pipewire management
+  environment.systemPackages = with pkgs; [ pwvucontrol ];
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
