@@ -29,7 +29,7 @@
     ../../system/services/pipewire.nix
     ../../system/services/flatpak.nix
     ../../system/services/kanata.nix
-    ../../system/services/nixos-cli.nix 
+    ../../system/services/nixos-cli.nix
   ];
 
   networking = {
@@ -59,7 +59,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -75,23 +75,24 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = (with pkgs; [
-    vscode
-    git
-    fastfetch
-    btop
-    wget
-    inputs.zen-browser.packages.${pkgs.system}.default    
+  environment.systemPackages =
+    (with pkgs; [
+      vscode
+      git
+      fastfetch
+      btop
+      wget
+      inputs.zen-browser.packages.${pkgs.system}.default
 
-    wineWowPackages.unstable
-    steam-run
-    
-  ]) ++ (with pkgs.gnomeExtensions; [
-    gsconnect
-    tray-icons-reloaded
-    window-gestures
-    battery-usage-wattmeter
-  ]);
+      wineWowPackages.unstable
+      steam-run
+    ])
+    ++ (with pkgs.gnomeExtensions; [
+      gsconnect
+      tray-icons-reloaded
+      window-gestures
+      battery-usage-wattmeter
+    ]);
 
   services.flatpak.packages = [
   ];

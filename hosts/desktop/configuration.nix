@@ -56,7 +56,7 @@
       "9.9.9.9"
       "9.9.9.11"
     ];
-  
+
     useDHCP = false;
     dhcpcd.enable = false;
 
@@ -87,7 +87,6 @@
 
   # Virtualization
   virtualisation.waydroid.enable = true;
-  
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;

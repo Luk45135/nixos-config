@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = [pkgs.git];
   nix.settings = {
-    trusted-users = [ "root" "@wheel" ];
+    trusted-users = ["root" "@wheel"];
     experimental-features = ["nix-command" "flakes"]; # Enabling nix commands and flakes
     substituters = [
       "https://cache.nixos.org?priority=10"
