@@ -232,6 +232,26 @@
         "type": "github"
       }
     },
+    "naviterm": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1746554592,
+        "narHash": "sha256-7lFYQjI/clmQZ6duLQFQ8CR5Q4HOo0MvHQarnGim6ss=",
+        "owner": "detoxify92",
+        "repo": "naviterm",
+        "rev": "c812612c2a4234b38675e5bce6427c212b6b6819",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "detoxify92",
+        "ref": "develop",
+        "repo": "naviterm",
+        "type": "gitlab"
+      }
+    },
     "nix-colors": {
       "inputs": {
         "base16-schemes": "base16-schemes",

@@ -27,6 +27,7 @@
       url = "github:0xc000022070/zen-browser-flake";
     };
     nixos-cli.url = "github:water-sucks/nixos";
+    naviterm.url = "gitlab:detoxify92/naviterm?ref=develop";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {
