@@ -28,6 +28,7 @@
     };
     nixos-cli.url = "github:water-sucks/nixos";
     naviterm.url = "gitlab:detoxify92/naviterm?ref=develop";
+    wheelwizard.url = "github:Luk45135/WheelWizard?ref=nix-flake";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {

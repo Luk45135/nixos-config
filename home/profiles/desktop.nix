@@ -49,6 +49,7 @@
       yt-dlp
       inputs.zen-browser.packages.${pkgs.system}.default
       inputs.naviterm.packages.${pkgs.system}.default
+      inputs.wheelwizard.packages.${pkgs.system}.default
     ];
   };
 
