@@ -10,7 +10,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    inputs.nixos-cosmic.nixosModules.default
 
     ../../system/core/boot.nix
     ../../system/core/locale.nix

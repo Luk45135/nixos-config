@@ -2,7 +2,7 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.follows = "nixos-cosmic/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +17,6 @@
       # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
