@@ -103,17 +103,6 @@
     };
   };
 
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      common.default = ["cosmic"];
-    };
-    extraPortals = [
-      pkgs.xdg-desktop-portal-cosmic
-    ];
-  };
-
   # Home Manager
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
