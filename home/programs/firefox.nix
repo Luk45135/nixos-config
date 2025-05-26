@@ -28,6 +28,7 @@
         sponsorblock
         greasemonkey
         ublock-origin
+        darkreader
       ];
     };
   };
