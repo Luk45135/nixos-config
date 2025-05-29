@@ -9,7 +9,6 @@
       vo = "gpu";
       profile = "gpu-hq";
       gpu-context = "wayland";
-      force-window = true;
     };
   };
 }
