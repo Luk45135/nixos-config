@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   # Install pwvucontroll for pipewire management
-  environment.systemPackages = with pkgs; [pwvucontrol];
+  environment.systemPackages = with pkgs; [
+    pwvucontrol
+    qpwgraph
+  ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
