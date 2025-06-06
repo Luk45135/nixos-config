@@ -66,10 +66,7 @@
         "--cmd cd"
       ];
     };
-    thefuck = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    pay-respects.enable = true;
   };
   home.packages = with pkgs; [
     tlrc
