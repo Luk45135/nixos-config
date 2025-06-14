@@ -35,6 +35,10 @@
         fk = "fuck";
       };
     };
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     tmux = {
       enable = true;
       clock24 = true;
