@@ -33,6 +33,7 @@
       };
       shellAliases = {
         fk = "fuck";
+        grep = "rg";
       };
     };
     fzf = {
@@ -77,5 +78,6 @@
     nix-output-monitor
     nvd
     ouch
+    ripgrep
   ];
 }
