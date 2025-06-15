@@ -82,7 +82,6 @@
       fastfetch
       btop
       wget
-      inputs.zen-browser.packages.${pkgs.system}.default
 
       wineWowPackages.unstable
       steam-run
