@@ -24,11 +24,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1751169806,
-        "narHash": "sha256-bq+FVbQZ61yhQP0Bb2bgBtu1Bidn4iaJfMCDqNkEQmQ=",
+        "lastModified": 1751342607,
+        "narHash": "sha256-p2w7cNkcIwEzKYhL1kjohU368rNqoDOwlDJZfSyZNWg=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "0dc3533f67cde2f338b5dd8c8b382c95c3287785",
+        "rev": "c0b09e83031df3bb3fc59cb1653035795273b222",
         "type": "gitlab"
       },
       "original": {
@@ -172,11 +172,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751236542,
-        "narHash": "sha256-M++mrTo3dQrFPMUKcbcS91O8GqeLnUmD40H/i0yA/c4=",
+        "lastModified": 1751384836,
+        "narHash": "sha256-7xRbl/VLXxE5DzJmk1wdKWJmPx8rAfNC/a6mXtqp5cc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "522c681ac22bf3b4d2cfc5f74e71401da82001cc",
+        "rev": "479f8889675770881033878a1c114fbfc6de7a4d",
         "type": "github"
       },
       "original": {
@@ -219,11 +219,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1750679090,
-        "narHash": "sha256-w1+JDh9/fc5xq9NiOsEp/wJSuV6E0Uy2HHciFm64sco=",
+        "lastModified": 1751318570,
+        "narHash": "sha256-hyfnh5OcLp6AWdMYvK04y3w45Y2IgL9KiOLxyqK1OkI=",
         "owner": "detoxify92",
         "repo": "naviterm",
-        "rev": "f87c3661db113129a8b7130393bc1123701a465e",
+        "rev": "7272642ce672af28645c4a4fd632b9695504165a",
         "type": "gitlab"
       },
       "original": {
@@ -276,11 +276,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751163021,
-        "narHash": "sha256-BZGuvFape+quvsfFm+RJdjABUu/xMWnRNd+mzvfrj30=",
+        "lastModified": 1751335864,
+        "narHash": "sha256-gzOCRagb6AYmjw6pSKNAJUajnSk0gKNsfZYSbiyrBkM=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "094da7499257ec96bb1708f76cf221687a9aa498",
+        "rev": "9ebdcaea0533a5277a65b4fc9935b66e0619e053",
         "type": "github"
       },
       "original": {
@@ -317,11 +317,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1751232874,
-        "narHash": "sha256-4C19nrbJd57Dz5zZtP5zyq4OY8zstOs40rcAT9iC6G8=",
+        "lastModified": 1751238388,
+        "narHash": "sha256-2qg8DRhtAsEWLIEdjubi2jHCrmXd2qxA/nCJPpUgl9s=",
         "owner": "water-sucks",
         "repo": "nixos",
-        "rev": "48033e6b7624a459663314b3a6af4a8282ee1a7b",
+        "rev": "8c10f23434c43df1a15cb1313b90b0fcd6811856",
         "type": "github"
       },
       "original": {
@@ -410,11 +410,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1751011381,
-        "narHash": "sha256-krGXKxvkBhnrSC/kGBmg5MyupUUT5R6IBCLEzx9jhMM=",
+        "lastModified": 1751271578,
+        "narHash": "sha256-P/SQmKDu06x8yv7i0s8bvnnuJYkxVGBWLWHaU+tt4YY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "30e2e2857ba47844aa71991daa6ed1fc678bcbb7",
+        "rev": "3016b4b15d13f3089db8a41ef937b13a9e33a8df",
         "type": "github"
       },
       "original": {
