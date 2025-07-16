@@ -23,7 +23,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-cli.url = "github:water-sucks/nixos";
-    naviterm.url = "gitlab:detoxify92/naviterm?ref=develop";
+    naviterm = {
+      url = "gitlab:detoxify92/naviterm?ref=develop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     wheelwizard.url = "github:Luk45135/WheelWizard?ref=nix-flake";
   };
 
